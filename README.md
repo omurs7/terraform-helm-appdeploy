@@ -21,7 +21,7 @@ provider "helm" {
 #### Add below code to your main.tf file
 module "name" {
   source     = "omurs7/appdeploy/helm"
-  version    = "0.0.6"
+  version    = "0.0.7"
   name       = "nginx-ingress-controller"
   repository = "https://charts.bitnami.com/bitnami"
   chart      = "nginx-ingress-controller"

@@ -1,16 +1,16 @@
-variable name {
+variable "name" {
   description = " Please specify a name for your deployment"
-  type = string
-  default = "demo"
+  type        = string
+  default     = "demo"
 }
 
-variable repository {
+variable "repository" {
   description = " Please specify a repository for your deployment"
-  type = string
-  default = null
+  type        = string
+  default     = null
 }
 
-variable repository {
+variable "chart" {
   description = " Please specify a chart for your deployment"
-  type = string
+  type        = string
 }
