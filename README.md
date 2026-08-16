@@ -1,6 +1,5 @@
 # terraform-helm-appdeploy
-#### Add bellow code to your provider
-```
+#### Add below code to your provider
 provider "helm" {
   kubernetes = {
     config_path = "~/.kube/config"
@@ -19,20 +18,13 @@ provider "helm" {
     }
   ]
 }
-```
-
-#### Add bellow code to your main.tf file
-
-module name {
+#### Add below code to your main.tf file
+module "name" {
   source     = "omurs7/appdeploy/helm"
   name       = "nginx-ingress-controller"
   repository = "https://charts.bitnami.com/bitnami"
   chart      = "nginx-ingress-controller"
 }
-```
-
-#### Run bellow command
-```
+#### Run below command
 terraform init
 terraform apply
-```
