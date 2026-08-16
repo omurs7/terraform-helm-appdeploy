@@ -1,31 +1,44 @@
 # terraform-helm-appdeploy
-#### Add below code to your provider
-provider "helm" {
-  kubernetes = {
-    config_path = "~/.kube/config"
-  }
 
-  registries = [
-    {
-      url      = "oci://localhost:5000"
-      username = "username"
-      password = "password"
-    },
-    {
-      url      = "oci://private.registry"
-      username = "username"
-      password = "password"
-    }
-  ]
+#### Add below code to your provider
+
+```hcl
+provider "helm" {
+  kubernetes = {
+    config_path = "~/.kube/config"
+  }
+
+  registries = [
+    {
+      url      = "oci://localhost:5000"
+      username = "username"
+      password = "password"
+    },
+    {
+      url      = "oci://private.registry"
+      username = "username"
+      password = "password"
+    }
+  ]
 }
+```
+
 #### Add below code to your main.tf file
+
+```hcl
 module "name" {
-  source     = "omurs7/appdeploy/helm"
-  version    = "0.0.8"
-  name       = "nginx-ingress-controller"
-  repository = "https://charts.bitnami.com/bitnami"
-  chart      = "nginx-ingress-controller"
+  source  = "omurs7/appdeploy/helm"
+  version = "0.0.9"
+
+  name       = "nginx-ingress-controller"
+  repository = "https://charts.bitnami.com/bitnami"
+  chart      = "nginx-ingress-controller"
 }
+```
+
 #### Run below command
+
+```bash
 terraform init
 terraform apply
+```
