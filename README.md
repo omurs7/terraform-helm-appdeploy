@@ -27,7 +27,6 @@ provider "helm" {
 ```
 module "name" {
   source  = "omurs7/appdeploy/helm"
-  version = "0.0.9"
 
   name       = "nginx-ingress-controller"
   repository = "https://charts.bitnami.com/bitnami"
