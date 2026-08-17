@@ -4,7 +4,7 @@ variable "name" {
   default     = "demo"
 }
 
-variable "name" {
+variable "namespace" {
   description = " Please specify a name for your namespace"
   type        = string
   default     = "default"
