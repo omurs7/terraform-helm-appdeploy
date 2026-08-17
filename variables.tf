@@ -20,3 +20,9 @@ variable "chart" {
   description = " Please specify a chart for your deployment"
   type        = string
 }
+
+variable "wait" {
+  description = "Please specify if you want to wait or not"
+  type        = bool
+  default     = false
+}
